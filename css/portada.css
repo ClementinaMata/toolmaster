@@ -28,8 +28,8 @@ body {
 }
 
 #one {
-  left: 40%;
-  top:400px;
+  left: 35%;
+  top:300px;
   position: absolute;
   background-color: #4CAF50;
   border: none;
@@ -38,20 +38,27 @@ body {
   padding: 15px 32px;
   font-size: 50px;
   z-index: 1;
-  width:200px;
+  width:400px;
   font-family: "pixel";
 }
 
-a{
-  text-decoration: none;
-  color:white;
-}
-a:hover {
-    color: yellow;
-}
+
 #two{
   position: absolute;
-  left: 37%;
+  left: 35%;
+  top: 400px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 50px;
+  z-index: 1;
+  width:400px;
+  font-family: "pixel";
+}
+#three{
+  position: absolute;
+  left: 35%;
   top: 500px;
   background-color: transparent;
   border: none;
@@ -59,9 +66,16 @@ a:hover {
   padding: 15px 32px;
   font-size: 50px;
   z-index: 1;
-  width:280px;
+  width:400px;
   font-family: "pixel";
 
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+a:hover {
+    color: yellow;
 }
 
 #tittle{
@@ -74,9 +88,15 @@ a:hover {
   font-family: "pixel";
 }
 
-img{
+#controls{
   position: absolute;
   left:900px;
+  top:400px;
+  z-index: 3;
+}
+#controls1{
+  position: absolute;
+  left:100px;
   top:400px;
   z-index: 3;
 }

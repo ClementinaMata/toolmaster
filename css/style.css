@@ -65,3 +65,10 @@ body{
   background-repeat: no-repeat;
 
 }
+.main2{
+  height: 27px;
+  width: 28px;
+  background-image: url(../images/boshy2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $(".main").addClass("explosion").removeClass("main");
   play("effects/portada.mp3");
   //Fijación de FPS, velocidades y cálculo del espacio.
   var fps = 60;
@@ -8,10 +7,13 @@ $(document).ready(function() {
   var desiredNumberOfHammers = 1;
   var hammers = [];
   $("#controls").hide();
-  $("#two").on("click",function(){
+  $("#controls1").hide();
+
+  $("#three").on("click",function(){
     $("#controls").show(2000);
     $("#controls").hide(2000);
-
+    $("#controls1").show(2000);
+    $("#controls1").hide(2000);
   });
   //Control de salida de Hammers
   function fullfillHammers(n) {

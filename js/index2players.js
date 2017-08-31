@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $(".main").addClass("explosion").removeClass("main");
   play("effects/music.mp3");
+
   //Fijación de FPS, velocidades y cálculo del espacio.
   var fps = 60;
   var speedProtagonist = 8;
@@ -9,7 +9,9 @@ $(document).ready(function() {
 
   //Creación de Protagonist
   var protagonist = new Protagonist(500, 500, speedProtagonist, "main");
-  //Detección del teclado.
+  var protagonist2 = new Protagonist(750, 500, speedProtagonist, "main2");
+
+  //Detección del teclado 1
   $(document).keydown(function(e) {
     if (e.keyCode == 39) {
       protagonist.direction[0] = true;
@@ -32,6 +34,32 @@ $(document).ready(function() {
       protagonist.direction[3] = false;
     }
   });
+
+  //Detección del teclado 2
+  $(document).keydown(function(e) {
+    if (e.keyCode == 68) {
+      protagonist2.direction[0] = true;
+    } else if (e.keyCode == 65) {
+      protagonist2.direction[1] = true;
+    } else if (e.keyCode == 87) {
+      protagonist2.direction[2] = true;
+    } else if (e.keyCode == 83) {
+      protagonist2.direction[3] = true;
+    }
+  });
+  $(document).keyup(function(e) {
+    if (e.keyCode == 68) {
+      protagonist2.direction[0] = false;
+    } else if (e.keyCode == 65) {
+      protagonist2.direction[1] = false;
+    } else if (e.keyCode == 87) {
+      protagonist2.direction[2] = false;
+    } else if (e.keyCode == 83) {
+      protagonist2.direction[3] = false;
+    }
+  });
+
+
   Protagonist.prototype.updateProtagonist = function() {
     //Implementar funciones ternarias.
     if (this.direction[2] == true && this.direction[0] == true) {
@@ -61,7 +89,6 @@ $(document).ready(function() {
       position: 'absolute'
     });
   };
-
 
   //Creación del Contador
   var counter = 0;
@@ -124,6 +151,8 @@ $(document).ready(function() {
   function update() {
     //Update protagonist
     protagonist.updateProtagonist();
+    protagonist2.updateProtagonist();
+
     //Update hammers
     hammers.forEach(function(e) {
       e.updateHammer();
@@ -144,7 +173,8 @@ $(document).ready(function() {
 
     // Update impacts
     checkObstacles();
-
+    checkObstacles2();
+    checkColision();
     // Update Counter
     counterUpdate();
 
@@ -174,6 +204,38 @@ $(document).ready(function() {
       }
     }
   }
+  function checkObstacles2() {
+    if ($(".hammer").collision(".main2").length > 0 || $(".meteor").collision(".main2").length > 0 || $(".key").collision(".main2").length > 0) {
+      if (protagonist2.hp > 0) {
+        protagonist2.hp -= 1;
+      } else {
+        $(".main2").addClass("explosion").removeClass("main2");
+        play("effects/pum.mp3");
+        setTimeout(function() {
+          alert("Do you wanna play again?");
+          location.reload();
+
+        }, 500);
+      }
+    }
+  }
+  function checkColision() {
+    if ($(".main").collision(".main2").length > 0) {
+      if (protagonist2.hp > 0) {
+        protagonist2.hp -= 1;
+      } else {
+        $(".main").addClass("explosion").removeClass("main");
+        $(".main2").addClass("explosion").removeClass("main2");
+        play("effects/pum.mp3");
+        setTimeout(function() {
+          alert("Do you wanna play again?");
+          location.reload();
+
+        }, 500);
+      }
+    }
+  }
+
 
   //Set Interval
   setInterval(function() {
