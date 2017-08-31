@@ -1,0 +1,67 @@
+body{
+  margin:10px;
+  overflow: hidden;
+}
+#board {
+  background-image: url(../images/fondo.jpg);
+  background-size: cover;
+  position:relative;
+  height: calc( 100vh - 20px);
+}
+
+.main{
+  height: 27px;
+  width: 28px;
+  background-image: url(../images/Boshy.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.meteor{
+  height:90px;
+  width: 20px;
+  border-radius: 35px;
+  background-image: url(../images/Destornillador.png) ;
+  background-size: cover;
+  background-position: center;
+  background-size:400%;
+  background-repeat: no-repeat;
+
+}
+
+.hammer{
+  height:60px;
+  width: 50px;
+  border-radius: 25%;
+  background-image: url(../images/Tool.gif) ;
+  background-position: center;
+  background-size:250%;
+  background-repeat: no-repeat;
+}
+
+.explosion{
+  height: 100px;
+  width: 100px;
+  background-image: url(../images/explosion.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.counter{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  line-height:50px;
+}
+
+.key{
+  height:50px;
+  width: 50px;
+  background-image: url(../images/Key.gif) ;
+  background-position: center;
+  background-size:140%;
+  background-repeat: no-repeat;
+
+}

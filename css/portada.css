@@ -1,0 +1,82 @@
+@font-face{
+  font-family: "pixel";
+  src:url("../pixel.ttf");
+}
+body {
+  overflow: hidden;
+}
+
+#board {
+  margin: 10px;
+  background-image: url(../images/fondo.jpg);
+  background-size: cover;
+  position: relative;
+  height: calc( 100vh - 20px);
+  font-family: "pixel";
+
+}
+
+.hammer {
+  height: 200px;
+  width: 200px;
+  border-radius: 25%;
+  background-image: url(../images/Tool.gif);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#one {
+  left: 40%;
+  top:400px;
+  position: absolute;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  background-color: transparent;
+  padding: 15px 32px;
+  font-size: 50px;
+  z-index: 1;
+  width:200px;
+  font-family: "pixel";
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+a:hover {
+    color: yellow;
+}
+#two{
+  position: absolute;
+  left: 37%;
+  top: 500px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 50px;
+  z-index: 1;
+  width:280px;
+  font-family: "pixel";
+
+}
+
+#tittle{
+  position: absolute;
+  top:0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: "pixel";
+}
+
+img{
+  position: absolute;
+  left:900px;
+  top:400px;
+  z-index: 3;
+}
