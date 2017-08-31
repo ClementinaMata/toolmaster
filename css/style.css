@@ -12,7 +12,7 @@ body{
 .main{
   height: 27px;
   width: 28px;
-  background-image: url(../images/Boshy.png);
+  background-image: url(../images/boshy.png);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -21,7 +21,7 @@ body{
   height:90px;
   width: 20px;
   border-radius: 35px;
-  background-image: url(../images/Destornillador.png) ;
+  background-image: url(../images/destornillador.png) ;
   background-size: cover;
   background-position: center;
   background-size:400%;
@@ -33,7 +33,7 @@ body{
   height:60px;
   width: 50px;
   border-radius: 25%;
-  background-image: url(../images/Tool.gif) ;
+  background-image: url(../images/tool.gif) ;
   background-position: center;
   background-size:250%;
   background-repeat: no-repeat;
