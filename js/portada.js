@@ -1,5 +1,6 @@
 $(document).ready(function() {
   play("effects/portada.mp3");
+
   //Fijación de FPS, velocidades y cálculo del espacio.
   var fps = 60;
   var speedHammer = 10;

@@ -197,9 +197,19 @@ $(document).ready(function() {
         $(".main").addClass("explosion").removeClass("main");
         play("effects/pum.mp3");
         setTimeout(function() {
-          alert("Do you wanna play again?");
-          location.reload();
+          var gameOver = $("<div>").attr("class", "gameOver").append("<a href='game2players.html'>Play Again!</a>");
+          var exit = $("<div>").attr("class", "exit").append("<a href='index2.html'>Exit</a>");
+          var points = $("<div>").attr("class", "points").append("You survived: " + Math.trunc( counter) + " seconds");
 
+          gameOver.css({top: "200px",left: "500px",position: "absolute"});
+          exit.css({top: "300px",left: "565px",position: "absolute"});
+          points.css({top: "10px",left: "10px",position: "absolute"});
+
+
+          $("#board").append(gameOver);
+          $("#board").append(exit);
+          $("#board").append(points);
+          counter = 0;
         }, 500);
       }
     }
@@ -212,8 +222,19 @@ $(document).ready(function() {
         $(".main2").addClass("explosion").removeClass("main2");
         play("effects/pum.mp3");
         setTimeout(function() {
-          alert("Do you wanna play again?");
-          location.reload();
+          var gameOver = $("<div>").attr("class", "gameOver").append("<a href='game2players.html'>Play Again!</a>");
+          var exit = $("<div>").attr("class", "exit").append("<a href='index.html'>Exit</a>");
+          var points = $("<div>").attr("class", "points").append("You survived: " + Math.trunc( counter) + " seconds");
+
+          gameOver.css({top: "200px",left: "500px",position: "absolute"});
+          exit.css({top: "300px",left: "565px",position: "absolute"});
+          points.css({top: "10px",left: "10px",position: "absolute"});
+          counter = 0;
+
+
+          $("#board").append(gameOver);
+          $("#board").append(exit);
+          $("#board").append(points);
 
         }, 500);
       }
@@ -228,9 +249,19 @@ $(document).ready(function() {
         $(".main2").addClass("explosion").removeClass("main2");
         play("effects/pum.mp3");
         setTimeout(function() {
-          alert("Do you wanna play again?");
-          location.reload();
+          var gameOver = $("<div>").attr("class", "gameOver").append("<a href='game2players.html'>Play Again!</a>");
+          var exit = $("<div>").attr("class", "exit").append("<a href='index.html'>Exit</a>");
+          var points = $("<div>").attr("class", "points").append("You survived: " + Math.trunc( counter) + " seconds");
 
+          gameOver.css({top: "200px",left: "500px",position: "absolute"});
+          exit.css({top: "300px",left: "565px",position: "absolute"});
+          points.css({top: "10px",left: "10px",position: "absolute"});
+          counter = 0;
+
+
+          $("#board").append(gameOver);
+          $("#board").append(exit);
+          $("#board").append(points);
         }, 500);
       }
     }

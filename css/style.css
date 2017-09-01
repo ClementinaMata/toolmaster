@@ -1,6 +1,11 @@
+@font-face{
+  font-family: "pixel";
+  src:url("../pixel.ttf");
+}
 body{
   margin:10px;
   overflow: hidden;
+
 }
 #board {
   background-image: url(../images/fondo.jpg);
@@ -71,4 +76,43 @@ body{
   background-image: url(../images/boshy2.png);
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.gameOver {
+  position: absolute;
+  border: none;
+  color: white;
+  font-size: 50px;
+  z-index: 4;
+  width:400px;
+  height: 50px;
+  font-family: "pixel";
+}
+.exit {
+  position: absolute;
+  border: none;
+  color: white;
+  font-size: 50px;
+  z-index: 3;
+  width:400px;
+  height: 50px;
+  font-family: "pixel";
+}
+.points{
+  position: absolute;
+  border: none;
+  color: white;
+  font-size: 40px;
+  z-index: 3;
+  width:500px;
+  height: 50px;
+  font-family: "pixel";
+  background-image:url(../images/fondo.jpg);
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+a:hover {
+    color: yellow;
 }
